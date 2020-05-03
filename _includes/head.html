@@ -44,8 +44,12 @@
     <meta name="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}" />
     {% if page.layout == "post" %}
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="https://cards-hkkw5geraq-uc.a.run.app/blog{{page.id}}.png" />
-    <meta name="og:image" content="https://cards-hkkw5geraq-uc.a.run.app/blog{{page.id}}.png" />
+    {% if page.og_image %}{% assign image_url = page.og_image %}
+    {% else %}
+    {% assign image_url = "https://cards-hkkw5geraq-uc.a.run.app/{{base_url}}{page.id}}.png" %}
+    {%endif%}
+    <meta name="twitter:image" content="{{image_url}}">
+    <meta name="og:image" content="{{image_url}}">
     {% else %}
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:image" content="http://glasnt.com/blog/img/header-thumbnail.png" />
