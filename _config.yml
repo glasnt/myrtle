@@ -1,5 +1,5 @@
 title: "musings"
 permalink: "/:title"
-
+thumbnail: "/img/thumbnail.jpg"
 header-img: "img/header_image.jpg"
 
