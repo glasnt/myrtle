@@ -10,7 +10,7 @@ description: musings
 
 <!-- Paginator starts here -->
 
-{% for post in site.posts %}
+{% for post in site.posts limit:5 %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">{{ post.title }}</h2>
@@ -23,7 +23,7 @@ description: musings
 <hr>
 {% endfor %}
 
-ARCHIVELINK
+<a href="/archive">Archive</a>
     </div>
   </div>
 </div>
