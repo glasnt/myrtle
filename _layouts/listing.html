@@ -8,9 +8,10 @@ description: musings
     <div class="col-lg-10  col-md-10 col-md-offset-1">
     {{ content }}
 
+
 <!-- Paginator starts here -->
 
-{% for post in site.posts limit:5 %}
+{% for post in site.posts  %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">{{ post.title }}</h2>
