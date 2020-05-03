@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "myrtle"
-  spec.version       = "0.1.0"
+  spec.version       = "0.1.1"
   spec.authors       = ["Katie McLaughlin"]
   spec.email         = ["katie@glasnt.com"]
 
