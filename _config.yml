@@ -17,3 +17,5 @@ archive_path: "archive.html"
 #BASE_PATH: "/blog"
 #baseurl: "/blog"
 title: "musings"
+
+home: "https://glasnt.com"
