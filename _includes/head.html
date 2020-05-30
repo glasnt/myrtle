@@ -40,13 +40,13 @@
     <meta name="twitter:site" content="@glasnt" />
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="og:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{%if page.description%}{{page.description}}{%else%}{{ page.content | strip_html | truncate: 100 }}{%endif%}" />
+    <meta name="twitter:description" content="{%if page.description%}{{page.description|strip_newlines}}{%else%}{{ page.content | strip_html|strip_newlines | truncate: 100 }}{%endif%}" />
     <meta name="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}" />
     {% if page.layout == "post" %}
     <meta name="twitter:card" content="summary_large_image" />
     {% if page.og_image %}{% assign image_url = page.og_image %}
     {% else %}
-    {% assign image_url = "https://cards-hkkw5geraq-uc.a.run.app/{{base_url}}{page.id}}.png" %}
+    {% capture image_url%}{{site.url}}{{site.cardfolder}}{{page.id}}.png{% endcapture %}
     {%endif%}
     <meta name="twitter:image" content="{{image_url}}">
     <meta name="og:image" content="{{image_url}}">
