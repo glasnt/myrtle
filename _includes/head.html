@@ -7,8 +7,8 @@
     <meta name="og:description" content="{{ site.description }}">
 
     <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    {% capture pageurl %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{%endcapture%}
+    <link rel="canonical" href="{{ pageurl }}">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}">
@@ -41,13 +41,14 @@
     <meta name="twitter:title" content="{{ page.title }}" />
     <meta name="og:title" content="{{ page.title }}" />
     <meta name="twitter:description" content="{%if page.description%}{{page.description|strip_newlines}}{%else%}{{ page.content | strip_html|strip_newlines | truncate: 100 }}{%endif%}" />
-    <meta name="og:url" content="{{site.baseurl}}{{page.url}}" />
+    <meta name="og:url" content="{{pageurl}}" />
     {% if page.layout == "post" %}
     <meta name="twitter:card" content="summary_large_image" />
-    {% if page.og_image %}{% assign image_url = page.og_image %}
+    {%- if page.og_image %}
+        {% assign image_url = page.og_image %}
     {% else %}
-    {% capture image_url%}{{site.baseurl}}{{site.cardfolder}}{{page.id}}.png{% endcapture %}
-    {%endif%}
+    {% capture image_url%}{{site.url}}{{site.baseurl}}{{site.cardfolder}}{{page.id}}.png{% endcapture %}
+    {%endif -%}
     <meta name="twitter:image" content="{{image_url}}">
     <meta name="og:image" content="{{image_url}}">
     {% else %}
