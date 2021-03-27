@@ -1,67 +1,24 @@
-<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ site.description }}">
-    <meta name="og:description" content="{{ site.description }}">
+{%- include snippets/get-article-title.html article=page -%}
+<title>{%- if __return -%}{{ __return }} - {{ site.title }}{%- else -%}{{ site.title }}{%- endif -%}</title>
 
-    <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-    {% capture pageurl %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{%endcapture%}
-    <link rel="canonical" href="{{ pageurl }}">
+<meta name="description" content="{%- if page.excerpt -%}{{ page.excerpt | strip_html | strip_newlines | strip | truncate: 160 }}{%- else -%}{{ site.description }}{%- endif -%}">
+<link rel="canonical" href="{%- include snippets/page-url.html -%}">
 
-    <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" href="{{ "/assets/css/bootstrap.min.css" | prepend: site.baseurl }}">
+{%- assign _paths_rss = site.paths.rss | default: site.data.variables.default.paths.rss -%}
+{%- include snippets/get-nav-url.html path=_paths_rss -%}
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ __return }}">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="{{ "/assets/css/clean-blog.css" | prepend: site.baseurl }}">
+{%- include head/favicon.html -%}
 
-    <!-- Pygments Github CSS -->
-    <link rel="stylesheet" href="{{ "/assets/css/syntax.css" | prepend: site.baseurl }}">
+{%- include snippets/prepend-baseurl.html path='/assets/css/main.css' -%}
+<link rel="stylesheet" href="{{ __return }}">
 
-    <!-- Custom Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+{%- include snippets/get-sources.html -%}
+{%- assign _sources = __return -%}
+<link rel="stylesheet" href="{{ _sources.font_awesome }}" >
 
-    <!-- pride.codes -->
-    <link rel="stylesheet" href="https://cdn.pride.codes/css/bar_body.css">
-
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-    <!-- social media cards -->
-    <meta name="twitter:site" content="@glasnt" />
-    <meta name="twitter:title" content="{{ page.title }}" />
-    <meta name="og:title" content="{{ page.title }}" />
-    <meta name="twitter:description" content="{%if page.description%}{{page.description|strip_newlines}}{%else%}{{ page.content | strip_html|strip_newlines | truncate: 100 }}{%endif%}" />
-    <meta name="og:url" content="{{pageurl}}" />
-    {% if page.layout == "post" %}
-    <meta name="twitter:card" content="summary_large_image" />
-    {%- if page.og_image %}
-        {% assign image_url = page.og_image %}
-    {% else %}
-    {% capture image_url%}{{site.url}}{{site.baseurl}}{{site.cardfolder}}{{page.id}}.png{% endcapture %}
-    {%endif -%}
-    <meta name="twitter:image" content="{{image_url}}">
-    <meta name="og:image" content="{{image_url}}">
-    {% else %}
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:image" content="http://glasnt.com/blog/img/header-thumbnail.png" />
-    <meta name="og:image" content="http://glasnt.com/blog/img/header-thumbnail.png" />
-    {% endif %}
-    {% if site.google_analytics %}
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id={{site.google_analytics}}"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-	  gtag('config', '{{ site.google_analytics }}');
-	</script>
-    {% endif %}
-
-</head>
+{%- include head/custom.html -%}
