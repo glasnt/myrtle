@@ -56,6 +56,7 @@
       {% else %}
           {{ site.cover | prepend: site.baseurl | prepend: site.url }}
       {% endif %}
+      {% if site.cardfolder %}{{site.url}}{{site.baseurl}}{{site.cardfolder}}{{page.id}}.png{% endif %}
   {% endcapture %}
   {% capture page_image %}{{ page_image | strip | rstrip | lstrip | escape | strip_newlines }}{% endcapture %}
 
