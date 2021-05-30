@@ -1,9 +1,10 @@
-# Site settings
+# Site settings Template
+# work around until "bundle exec github-pages versions" supports jekyll 4+
 title_left    : "glasnt.com"
 title_right   : # baseurl default 
 description   : "in which glasnt does the things"
 url           : "https://glasnt.com"
-baseurl       : "/talks" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+baseurl       : "/talks" 
 cover         : "" # image uri like logo/cover image for site seo
 
 google_analytics  : UA-XXXXX-XX
@@ -15,18 +16,6 @@ permalink   : /:title/
 markdown    : kramdown
 highlighter : rouge
 
-source      : ./
-destination : ./_site
-# Author settings
-author:
-  name     : "Katie McLaughlin"
-
-plugins:
-  - jekyll-sitemap
-  - bourbon
-  - jekyll-paginate
-
-# navbar pages
 navbar:
   - slug : /
     title: home
@@ -42,6 +31,13 @@ navbar:
     title: now
   - slug: /blog/archive
     title: archive
+
+## theme/repo specific.
+
+plugins:
+  - jekyll-sitemap
+  - bourbon
+  - jekyll-paginate
 
 exclude:
   - "gulp"
