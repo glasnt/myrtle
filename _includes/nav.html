@@ -1,9 +1,9 @@
 
 <nav class="nav">
   <div class="container">
-    <h1 class="logo"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}"><span>{{ site.title_left | default: site.data.defaults.title_left }}</span>{{ site.baseurl }}</a></h1>
+    <h1 class="logo"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}"><span>{{ site.title_left }}</span>{{ site.baseurl }}</a></h1>
     <ul class="navbar">
-      {% for nav in site.data.defaults.navbar %}
+      {% for nav in site.navbar %}
       <li><a href="{{ nav.slug | prepend: site.url }}">{{nav.title}}</a></li>
       {% endfor %}
     </ul>
