@@ -1,17 +1,19 @@
-# Site settings Template
-# work around until "bundle exec github-pages versions" supports jekyll 4+
+# Jekyll and GitHub pages is difficult. 
+# Copy the content between START and END, and customise the things flagged EDIT
+
+
+# START COPY ME
 title_left    : "glasnt.com"
-title_right   : # baseurl default 
-description   : "in which glasnt does the things"
+title_right   : # baseurl default   
 url           : "https://glasnt.com"
-baseurl       : "/talks" 
 cover         : "" # image uri like logo/cover image for site seo
 
-google_analytics  : UA-XXXXX-XX
-twitter_username  : "glasnt"
+description       : "in which glasnt does the things"    # EDIT       
+baseurl           : "/talks"                             # EDIT
+google_analytics  : UA-XXXXX-XX                          # EDIT
+twitter_username  : "glasnt"     
 postshare_enabled : true
 
-# Build settings
 permalink   : /:title/
 markdown    : kramdown
 highlighter : rouge
@@ -32,7 +34,9 @@ navbar:
   - slug: /blog/archive
     title: archive
 
-## theme/repo specific.
+# END COPY ME
+
+# System settings start here, do not need to be copied.
 
 plugins:
   - jekyll-sitemap
