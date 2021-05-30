@@ -1,7 +1,13 @@
-# myrtle
+# Thinkspace
 
-A custom theme based on [clean-blog](https://startbootstrap.com/themes/clean-blog-jekyll/), for use with glasnt.com sites. 
+> Thinkspace is just another minimalist Jekyll theme which designed for technical writing blog.
 
-## Use
+[![LICENSE](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) ![GENERATOR](https://img.shields.io/badge/made_with-jekyll-blue.svg) ![VERSION](https://img.shields.io/badge/current_version-2.5-green.svg) ![TRAVIS-CI](https://travis-ci.org/heiswayi/thinkspace.svg?branch=master)
 
-You are free to learn from this code, but you probably don't want to use it directly because your site will look like a glasnt.com site. I have hardcoded values in this theme that aren't overrideable in this current form, etc. 
+- **Demo:** https://heiswayi.github.io/thinkspace/
+
+![SCREENSHOT](https://i.imgur.com/1YS078k.png)
+
+## License
+
+[MIT](LICENSE.md)

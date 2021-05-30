@@ -1,24 +1,5 @@
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-8 text-center">
-      <span style="font-size: 2em; color: #4c4c4c">
-        <a href="{{ "/feed.xml" | prepend: site.baseurl }}"><i class="fas fa-rss-square"></i></a>
-        <a href="https://twitter.com/glasnt"><i class="fab fa-twitter-square"></i></a>
-        <a href="https://instagram.com/glasnt"><i class="fab fa-instagram-square"></i></a>
-        <a href="https://github.com/glasnt"><i class="fab fa-github-square"></i></a>
-        </span>
-            </div>
-        </div>
-    </div>
+<footer class="site-footer">
+  <div class="container">
+    <small class="block">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }} &middot; &lt;/&gt; Powered by <a href="https://jekyllrb.com/">Jekyll</a> and <a href="https://github.com/heiswayi/thinkspace">Thinkspace theme</a></small>
+  </div>
 </footer>
-
-<!-- jQuery -->
-<script src="{{ "/assets/js/jquery.min.js " | prepend: site.baseurl }}"></script>
-
-<!-- Bootstrap Core JavaScript -->
-<script src="{{ "/assets/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
-
-<!-- Custom Theme JavaScript -->
-<script src="{{ "/assets/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>

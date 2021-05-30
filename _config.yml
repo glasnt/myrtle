@@ -1,1 +1,70 @@
-permalink: "/:title"
+# Site settings
+title_left    : "glasnt.com"
+title_right   : # baseurl default 
+description   : "Minimalist Jekyll theme for technical writing blog."
+url           : "https://glasnt.com"
+baseurl       : "/talks" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
+cover         : "" # image uri like logo/cover image for site seo
+
+google_analytics  : UA-XXXXX-XX
+twitter_username  : "glasnt"
+postshare_enabled : true
+
+# Build settings
+permalink   : /:title/
+markdown    : kramdown
+highlighter : rouge
+
+source      : ./
+destination : ./_site
+
+# Sass configuration
+sass:
+  sass_dir  : assets/scss
+  style     : compressed # expanded
+
+# Author settings
+author:
+  name     : "Katie McLaughlin"
+
+plugins:
+  - jekyll-sitemap
+  - bourbon
+  - jekyll-paginate
+
+# navbar pages
+navbar:
+  - slug : /
+    title: home
+  - slug : /blog/about
+    title: about
+  - slug: /talks
+    title: talks
+  - slug: /writing
+    title: writing
+  - slug: /blog
+    title: blog
+  - slug: /now
+    title: now
+  - slug: /blog/archive
+    title: archive
+
+exclude:
+  - "gulp"
+  - "node_modules"
+  - "bower"
+  - "bower_components"
+  - "config.rb"
+  - "src"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - ".rvmrc"
+  - ".rbenv-version"
+  - "package.json"
+  - "gulpfile.js"
+  - "README.md"
+  - "Rakefile"
+  - "changelog.md"
+  - "script"
+  - "vendor"
+  - "thinkspace.gemspec"
