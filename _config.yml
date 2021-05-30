@@ -1,37 +1,38 @@
 # Jekyll and GitHub pages is difficult. 
 # Copy the content between START and END, and customise the things flagged EDIT
 
-
 # START COPY ME
-title_left    : "glasnt.com"
-title_right   : # baseurl default   
-url           : "https://glasnt.com"
-cover         : "" # image uri like logo/cover image for site seo
-
+# EDIT ME
+# remote_theme: glasnt/myrtle@thinkspace
+# repository: glasnt/repo_name
 description       : "in which glasnt does the things"    # EDIT       
 baseurl           : "/talks"                             # EDIT
-google_analytics  : UA-XXXXX-XX                          # EDIT
-twitter_username  : "glasnt"     
-postshare_enabled : true
 
-permalink   : /:title/
-markdown    : kramdown
-highlighter : rouge
+title_left         : "glasnt.com"
+url                : "https://glasnt.com"
+cover              : "" # image uri like logo/cover image for site seo
+google_analytics   : G-265B4NHGG0
+twitter_username   : "glasnt"     
+postshare_enabled  : true
+
+permalink          : /:title/
+markdown           : kramdown
+highlighter        : rouge
 
 navbar:
   - slug : /
     title: home
-  - slug : /blog/about
+  - slug : /blog/about/
     title: about
-  - slug: /talks
+  - slug: /talks/
     title: talks
-  - slug: /writing
+  - slug: /writing/
     title: writing
-  - slug: /blog
+  - slug: /blog/
     title: blog
-  - slug: /now
+  - slug: /now/
     title: now
-  - slug: /blog/archive
+  - slug: /blog/archive/
     title: archive
 
 # END COPY ME
