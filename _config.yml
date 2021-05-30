@@ -6,15 +6,14 @@
 # remote_theme: glasnt/myrtle@thinkspace
 # repository: glasnt/repo_name
 description       : "in which glasnt does the things"    # EDIT       
-baseurl           : "/talks"                             # EDIT
+baseurl           : "/template"                             # EDIT
 
 title_left         : "glasnt.com"
 url                : "https://glasnt.com"
-cover              : "" # image uri like logo/cover image for site seo
 google_analytics   : G-265B4NHGG0
 twitter_username   : "glasnt"     
 postshare_enabled  : true
-
+cardfolder: "/assets/cards"
 permalink          : /:title/
 markdown           : kramdown
 highlighter        : rouge
