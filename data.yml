@@ -1,0 +1,17 @@
+
+# navbar pages
+navbar:
+  - slug : /
+    title: home
+  - slug : /blog/about
+    title: about
+  - slug: /talks
+    title: talks
+  - slug: /writing
+    title: writing
+  - slug: /blog
+    title: blog
+  - slug: /now
+    title: now
+  - slug: /blog/archive
+    title: archive

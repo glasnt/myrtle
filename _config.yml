@@ -1,14 +1,6 @@
-# Site settings
-title_left    : "glasnt.com"
-title_right   : # baseurl default 
-description   : "Minimalist Jekyll theme for technical writing blog."
-url           : "https://glasnt.com"
-baseurl       : "/talks" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
-cover         : "" # image uri like logo/cover image for site seo
+# See also _data/default.yml, or override them here.
 
-google_analytics  : UA-XXXXX-XX
-twitter_username  : "glasnt"
-postshare_enabled : true
+baseurl       : "/talks" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 
 # Build settings
 permalink   : /:title/
@@ -26,22 +18,6 @@ plugins:
   - bourbon
   - jekyll-paginate
 
-# navbar pages
-navbar:
-  - slug : /
-    title: home
-  - slug : /blog/about
-    title: about
-  - slug: /talks
-    title: talks
-  - slug: /writing
-    title: writing
-  - slug: /blog
-    title: blog
-  - slug: /now
-    title: now
-  - slug: /blog/archive
-    title: archive
 
 exclude:
   - "gulp"
