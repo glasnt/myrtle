@@ -1,0 +1,69 @@
+:root {
+    --card-width: 600px;
+    --card-height: 314px;
+    --spacing: 2rem;
+    --font-family: PT Sans;
+    --primary-color: black;
+  }
+  
+  .preview-grid {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: var(--spacing);
+      column-gap: var(--spacing);
+      justify-content: center;
+  }
+  
+  .preview {
+      flex-basis: var(--card-width);
+      width: var(--card-width); 
+      height: var(--card-height);
+      border-radius: var(--radius);
+      display:block;
+  }
+
+
+  .inner-grid {
+      display: flex;
+      flex-wrap: wrap;
+      height: var(--card-height);
+  }
+  
+  .inner-grid > * {
+      flex-grow: 1;
+      flex-shrink: 1;
+  }
+  
+  .inner-grid .title {
+      font-size: 2rem;
+      font-weight: bold;
+      width: calc(var(--card-width) - 200px);
+      font-family: var(--font-family);
+      color: var(--primary-color);
+      text-align: left;
+      margin: var(--spacing);
+  }
+  
+  .inner-grid .title::after {
+      content: " ";
+      font-weight: lighter;
+      width: 100%;
+      height: 12px;
+      display: block;
+  }
+  
+  .inner-grid .footer {
+      align-self: flex-end;
+      margin: 0 var(--spacing) 0 var(--spacing);
+      font-size: 3rem;
+      text-align: right;
+      font-weight: 500;
+      color: var(--secondary-color)
+  }
+
+  .inner-grid .graphic { 
+      text-align: right;
+  }
+  .inner-grid .graphic img {
+        height: 75px;
+  }

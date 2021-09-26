@@ -16,6 +16,8 @@ postshare_enabled  : true
 permalink          : /:title/
 markdown           : kramdown
 highlighter        : rouge
+cover              : sparkles.png
+cardfolder         : /assets/cards
 
 navbar:
   - slug : /
@@ -41,6 +43,7 @@ plugins:
   - jekyll-sitemap
   - bourbon
   - jekyll-paginate
+  - jekyll-redirect-from
 
 exclude:
   - "gulp"
