@@ -7,10 +7,10 @@
 # repository: glasnt/repo_name
 description       : "in which glasnt does the things"    # EDIT       
 baseurl           : "/template"                             # EDIT
+google_analytics  : "valuehere" #EDIT
 
 title_left         : "glasnt.com"
 url                : "https://glasnt.com"
-google_analytics   : G-265B4NHGG0
 twitter_username   : "glasnt"     
 postshare_enabled  : true
 permalink          : /:title/
