@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
 	spec.name          = "myrtle"
-	spec.version       = "0.2.0"
+	spec.version       = "0.3.0"
 	spec.authors       = ["Heiswayi Nrird", "Katie McLaughlin"]
 	spec.email         = ["heiswayi@nullableobject.com", "katie@glasnt.com"]
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
 	spec.files         = `git ls-files -z`.split("\x0").select { |f| f.match(%r!^(assets|_layouts|_includes|_sass|(LICENSE|README)((\.(txt|md|markdown)|$)))!i) }
 
-	spec.add_runtime_dependency "jekyll", "~> 3.8.5"
-	spec.add_development_dependency "rake", "~> 12.0"
+	spec.add_runtime_dependency "jekyll", "~> 4"
+	spec.add_development_dependency "rake", "~> 13.0"
 end
 
